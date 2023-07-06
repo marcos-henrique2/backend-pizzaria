@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts",
-    "vercel-build": "npx prisma migrate deploy"
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "start": "prisma migrate deploy && prisma generate && yarn dev"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
